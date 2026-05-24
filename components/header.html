@@ -6,7 +6,7 @@
       <!-- Logo -->
       <a href="index.html" class="header-logo" aria-label="Waterfords Cocktails – Home">
         <img
-          src="assets/images/logo.png"
+          src="assets/images/logo.svg"
           alt="Waterfords Cocktails"
           width="186"
           height="66"
@@ -16,46 +16,55 @@
 
       <!-- Desktop navigation -->
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="index.html"     data-i18n="nav.home"    class="nav-link">Home</a>
-        <a href="about.html"     data-i18n="nav.about"   class="nav-link">About Us</a>
-        <a href="flavours.html"  data-i18n="nav.flavours" class="nav-link">Our Flavours</a>
-        <a href="where-to-buy.html" data-i18n="nav.where" class="nav-link">Where to Buy</a>
-        <a href="contact.html"   data-i18n="nav.contact" class="nav-link">Contact</a>
+        <a href="index.html"        data-i18n="nav.home"     class="nav-link">Home</a>
+        <a href="about.html"        data-i18n="nav.about"    class="nav-link">About Us</a>
+        <a href="flavours.html"     data-i18n="nav.flavours" class="nav-link">Our Flavours</a>
+        <a href="where-to-buy.html" data-i18n="nav.where"    class="nav-link">Where to Buy</a>
+        <a href="contact.html"      data-i18n="nav.contact"  class="nav-link">Contact</a>
       </nav>
 
-      <!-- Language Switcher + Hamburger -->
-      <div style="display:flex; align-items:center; gap:1rem;">
+      <!-- Right side: language switcher + hamburger -->
+      <div style="display:flex; align-items:center; gap:0.75rem; flex-shrink:0;">
 
         <!-- Language switcher -->
-        <div class="lang-switcher" id="langSwitcher" aria-label="Language selection">
-          <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Select language">
-            <span class="flag" id="currentFlag">🇬🇧</span>
-            <span id="currentLangLabel">EN</span>
-            <span class="chevron" aria-hidden="true">▾</span>
+        <div class="lang-switcher" id="langSwitcher">
+          <button
+            class="lang-btn"
+            id="langBtn"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-label="Select language"
+            type="button"
+          >
+            <span class="flag" id="currentFlag" style="font-size:1.1rem; line-height:1;">🇬🇧</span>
+            <span id="currentLangLabel" style="font-size:0.75rem; font-weight:600; letter-spacing:0.08em;">EN</span>
+            <span class="chevron" aria-hidden="true" style="font-size:0.55rem; margin-left:2px;">▾</span>
           </button>
-          <div class="lang-dropdown" role="listbox" aria-label="Languages" id="langDropdown">
-            <div class="lang-option active" role="option" data-lang="en" tabindex="0">
-              <span class="flag">🇬🇧</span>
+
+          <div class="lang-dropdown" id="langDropdown" role="listbox" aria-label="Languages">
+            <div class="lang-option active" role="option" data-lang="en" tabindex="0" aria-selected="true">
+              <span style="font-size:1.1rem;">🇬🇧</span>
               <span>English</span>
             </div>
-            <div class="lang-option" role="option" data-lang="nl" tabindex="0">
-              <span class="flag">🇳🇱</span>
+            <div class="lang-option" role="option" data-lang="nl" tabindex="0" aria-selected="false">
+              <span style="font-size:1.1rem;">🇳🇱</span>
               <span>Nederlands</span>
             </div>
-            <div class="lang-option" role="option" data-lang="de" tabindex="0">
-              <span class="flag">🇩🇪</span>
+            <div class="lang-option" role="option" data-lang="de" tabindex="0" aria-selected="false">
+              <span style="font-size:1.1rem;">🇩🇪</span>
               <span>Deutsch</span>
             </div>
           </div>
         </div>
 
-        <!-- Hamburger toggle (mobile) -->
+        <!-- Hamburger (mobile only) -->
         <button
           class="menu-toggle"
           id="menuToggle"
           aria-label="Open menu"
           aria-expanded="false"
           aria-controls="mobileMenu"
+          type="button"
         >
           <span></span>
           <span></span>
@@ -70,26 +79,26 @@
 <!-- Mobile menu overlay -->
 <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
   <nav aria-label="Mobile navigation links">
-    <a href="index.html"        data-i18n="nav.home"     style="--i:1">Home</a>
-    <a href="about.html"        data-i18n="nav.about"    style="--i:2">About Us</a>
-    <a href="flavours.html"     data-i18n="nav.flavours" style="--i:3">Our Flavours</a>
-    <a href="where-to-buy.html" data-i18n="nav.where"    style="--i:4">Where to Buy</a>
-    <a href="contact.html"      data-i18n="nav.contact"  style="--i:5">Contact</a>
+    <a href="index.html"        data-i18n="nav.home"     style="--i:1;">Home</a>
+    <a href="about.html"        data-i18n="nav.about"    style="--i:2;">About Us</a>
+    <a href="flavours.html"     data-i18n="nav.flavours" style="--i:3;">Our Flavours</a>
+    <a href="where-to-buy.html" data-i18n="nav.where"    style="--i:4;">Where to Buy</a>
+    <a href="contact.html"      data-i18n="nav.contact"  style="--i:5;">Contact</a>
   </nav>
 
   <div class="mobile-menu-bottom">
-    <div class="mobile-lang" aria-label="Language switcher">
-      <button data-lang="en" class="mobile-lang-btn active">
-        <span>🇬🇧</span> EN
+    <div class="mobile-lang">
+      <button class="mobile-lang-btn active" data-lang="en" type="button">
+        <span>🇬🇧</span>&nbsp;EN
       </button>
-      <button data-lang="nl" class="mobile-lang-btn">
-        <span>🇳🇱</span> NL
+      <button class="mobile-lang-btn" data-lang="nl" type="button">
+        <span>🇳🇱</span>&nbsp;NL
       </button>
-      <button data-lang="de" class="mobile-lang-btn">
-        <span>🇩🇪</span> DE
+      <button class="mobile-lang-btn" data-lang="de" type="button">
+        <span>🇩🇪</span>&nbsp;DE
       </button>
     </div>
-    <p style="font-size:0.75rem; color:rgba(255,255,255,0.3); font-family:var(--font-sans); letter-spacing:0.1em; text-transform:uppercase; margin-top:0.5rem;">
+    <p style="font-size:0.72rem; color:rgba(255,255,255,0.3); font-family:var(--font-sans); letter-spacing:0.12em; text-transform:uppercase; margin-top:0.75rem;">
       Waterfords Cocktails
     </p>
   </div>

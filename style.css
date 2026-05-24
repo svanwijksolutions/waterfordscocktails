@@ -252,9 +252,11 @@ body.menu-open .site-header {
 
 .header-logo:hover img { transform: scale(1.03); }
 
-/* Logo colour inversion based on header state */
-.site-header:not(.scrolled) .header-logo img { filter: brightness(0) invert(1); }
-.site-header.scrolled .header-logo img { filter: none; }
+/* Logo colour — SVG is wit. Transparante header: direct tonen. Witte header: omzetten naar navy */
+.site-header:not(.scrolled) .header-logo img { filter: none; }
+.site-header.scrolled .header-logo img {
+  filter: brightness(0) saturate(100%) invert(15%) sepia(60%) saturate(800%) hue-rotate(193deg) brightness(85%);
+}
 
 /* Nav links */
 .nav-links {
