@@ -1,0 +1,96 @@
+<!-- components/header.html -->
+<header class="site-header" id="site-header" role="banner">
+  <div class="container">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="header-logo" aria-label="Waterfords Cocktails – Home">
+        <img
+          src="assets/images/logo.png"
+          alt="Waterfords Cocktails"
+          width="186"
+          height="66"
+          loading="eager"
+        />
+      </a>
+
+      <!-- Desktop navigation -->
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html"     data-i18n="nav.home"    class="nav-link">Home</a>
+        <a href="about.html"     data-i18n="nav.about"   class="nav-link">About Us</a>
+        <a href="flavours.html"  data-i18n="nav.flavours" class="nav-link">Our Flavours</a>
+        <a href="where-to-buy.html" data-i18n="nav.where" class="nav-link">Where to Buy</a>
+        <a href="contact.html"   data-i18n="nav.contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Language Switcher + Hamburger -->
+      <div style="display:flex; align-items:center; gap:1rem;">
+
+        <!-- Language switcher -->
+        <div class="lang-switcher" id="langSwitcher" aria-label="Language selection">
+          <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Select language">
+            <span class="flag" id="currentFlag">🇬🇧</span>
+            <span id="currentLangLabel">EN</span>
+            <span class="chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="lang-dropdown" role="listbox" aria-label="Languages" id="langDropdown">
+            <div class="lang-option active" role="option" data-lang="en" tabindex="0">
+              <span class="flag">🇬🇧</span>
+              <span>English</span>
+            </div>
+            <div class="lang-option" role="option" data-lang="nl" tabindex="0">
+              <span class="flag">🇳🇱</span>
+              <span>Nederlands</span>
+            </div>
+            <div class="lang-option" role="option" data-lang="de" tabindex="0">
+              <span class="flag">🇩🇪</span>
+              <span>Deutsch</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hamburger toggle (mobile) -->
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+  <nav aria-label="Mobile navigation links">
+    <a href="index.html"        data-i18n="nav.home"     style="--i:1">Home</a>
+    <a href="about.html"        data-i18n="nav.about"    style="--i:2">About Us</a>
+    <a href="flavours.html"     data-i18n="nav.flavours" style="--i:3">Our Flavours</a>
+    <a href="where-to-buy.html" data-i18n="nav.where"    style="--i:4">Where to Buy</a>
+    <a href="contact.html"      data-i18n="nav.contact"  style="--i:5">Contact</a>
+  </nav>
+
+  <div class="mobile-menu-bottom">
+    <div class="mobile-lang" aria-label="Language switcher">
+      <button data-lang="en" class="mobile-lang-btn active">
+        <span>🇬🇧</span> EN
+      </button>
+      <button data-lang="nl" class="mobile-lang-btn">
+        <span>🇳🇱</span> NL
+      </button>
+      <button data-lang="de" class="mobile-lang-btn">
+        <span>🇩🇪</span> DE
+      </button>
+    </div>
+    <p style="font-size:0.75rem; color:rgba(255,255,255,0.3); font-family:var(--font-sans); letter-spacing:0.1em; text-transform:uppercase; margin-top:0.5rem;">
+      Waterfords Cocktails
+    </p>
+  </div>
+</div>

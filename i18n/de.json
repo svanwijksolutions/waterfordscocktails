@@ -1,0 +1,108 @@
+{
+  "lang": "de",
+  "nav": {
+    "home": "Home",
+    "about": "Über Uns",
+    "flavours": "Unsere Sorten",
+    "where": "Wo Kaufen",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "tagline": "Die Zukunft verfeinerten Trinkens,",
+    "tagline2": "ohne Alkohol.",
+    "sub": "Premium alkoholfreie Cocktails in der Dose. 0,0% Alkohol, 100% Geschmack.",
+    "cta": "Italian Spritz Entdecken",
+    "cta2": "Wo Kaufen"
+  },
+  "about_snippet": {
+    "label": "Über Waterfords",
+    "title": "Kreiert für die, die bewusst wählen",
+    "text": "Wir glauben, dass Raffinesse nichts mit Alkohol zu tun hat. Bei Waterfords Cocktails kreieren wir premium trinkfertige Cocktails, die das volle Erlebnis bieten — den Geschmack, das Ritual, den Moment — vollständig alkoholfrei.",
+    "cta": "Unsere Geschichte"
+  },
+  "product": {
+    "label": "Unsere Sorten",
+    "title": "Italian Spritz 0,0%",
+    "desc": "Italienischer Glanz in unserer alkoholfreien Italian Spritz Dose. Eine verfeinerte Mischung aus aromatischen Kräutern, fruchtigem Zitrus und bittersüßer Erfrischung für festliche Anlässe, Entspannung oder puren Genuss. Die praktische Dose bringt die raffinierten Aromen Italiens direkt in Ihr Glas.",
+    "badge1": "0,0% Alkohol",
+    "badge2": "250ml",
+    "badge3": "Trinkfertig",
+    "badge4": "Prickelnd",
+    "cta": "Entdecken",
+    "coming_label": "Demnächst",
+    "coming_title": "Neue Spritz Varianten",
+    "coming_text": "Wir entwickeln kontinuierlich neue Expressionen. Mehr spannende alkoholfreie Spritz-Varianten sind auf dem Weg."
+  },
+  "video": {
+    "label": "Mit Sorgfalt hergestellt",
+    "title": "Von der Produktion in Ihr Glas",
+    "text": "Jede Waterfords Dose wird mit Präzision und Leidenschaft hergestellt. Sehen Sie, wie wir unsere premium alkoholfreien Cocktails zum Leben erwecken."
+  },
+  "retailers": {
+    "label": "Wo zu Finden",
+    "title": "Erhältlich bei",
+    "text": "Wir beliefern Einzelhandel, Gastronomie, Großhandel und Direktkunden. Finden Sie Waterfords bei diesen vertrauenswürdigen Partnern."
+  },
+  "about_page": {
+    "label": "Unsere Geschichte",
+    "title": "Wir sind Waterfords Cocktails",
+    "text1": "Waterfords Cocktails wurde mit einer klaren Mission gegründet: Premium alkoholfreie Cocktails zu kreieren, die keine Kompromisse bei Geschmack, Eleganz oder Erlebnis eingehen. Wir glauben, dass die Zukunft des verfeinerten Trinkens eine ist, in der alle — Fahrer, Eltern, Sportler und Menschen, die einfach nicht trinken möchten — stolz ein Glas erheben können.",
+    "text2": "Unser Italian Spritz ist das Ergebnis monatelanger sorgfältiger Entwicklung. Eine verfeinerte Mischung aus aromatischen Kräutern, fruchtigem Zitrus und bittersüßer Erfrischung, abgefüllt in unserer charakteristischen 250ml-Dose. Wir sind in Den Haag ansässig und beliefern Einzelhändler, Gastronomiebetriebe, Großhändler und Verbraucher direkt in den Niederlanden.",
+    "text3": "Wir sind stolz auf das, was wir aufbauen, und wir haben gerade erst begonnen.",
+    "values_label": "Was uns antreibt",
+    "v1_title": "Kein Kompromiss",
+    "v1_text": "Volles Cocktail-Erlebnis. Kein Alkohol. Wir opfern nie den Geschmack.",
+    "v2_title": "Trinkfertig",
+    "v2_text": "Öffnen, einschenken, genießen. Kein Mischen, kein Aufwand.",
+    "v3_title": "Für Alle",
+    "v3_text": "Ob Sie fahren, trainieren oder einfach klar bleiben möchten — unsere Getränke sind für Sie.",
+    "cta": "Italian Spritz Entdecken"
+  },
+  "where_page": {
+    "label": "Wo Kaufen",
+    "title": "Waterfords in Ihrer Nähe finden",
+    "text": "Waterfords Italian Spritz ist über Einzelhandels-, Gastronomie- und Großhandelskanäle in den Niederlanden erhältlich. Wir verkaufen auch direkt an Verbraucher. Suchen Sie einen bestimmten Händler oder möchten Sie uns ins Sortiment aufnehmen? Kontaktieren Sie uns.",
+    "channels_label": "Wir beliefern",
+    "ch1": "Einzelhandel",
+    "ch1_text": "Supermärkte und Fachgeschäfte.",
+    "ch2": "Gastronomie",
+    "ch2_text": "Restaurants, Bars und Hotels.",
+    "ch3": "Großhandel",
+    "ch3_text": "Distributoren und Cash & Carry.",
+    "ch4": "Direkt",
+    "ch4_text": "Bestellen Sie direkt bei uns.",
+    "cta": "Kontaktieren Sie Uns"
+  },
+  "contact_page": {
+    "label": "Kontakt Aufnehmen",
+    "title": "Waterfords Kontakt",
+    "text": "Interessiert daran, unsere Produkte zu führen, oder möchten Sie einfach Hallo sagen? Wir freuen uns von Ihnen zu hören.",
+    "name": "Ihr Name",
+    "email": "Ihre E-Mail",
+    "company": "Unternehmen (optional)",
+    "message": "Ihre Nachricht",
+    "send": "Nachricht Senden",
+    "sending": "Wird gesendet...",
+    "success": "Vielen Dank! Wir melden uns bald bei Ihnen.",
+    "address_label": "Adresse",
+    "phone_label": "Telefon",
+    "email_label": "E-Mail"
+  },
+  "footer": {
+    "tagline": "Die Zukunft verfeinerten Trinkens, ohne Alkohol.",
+    "links_label": "Navigation",
+    "contact_label": "Kontakt",
+    "social_label": "Folgen Sie Uns",
+    "privacy": "Datenschutzerklärung",
+    "copy": "© 2025 Waterfords Cocktails. Alle Rechte vorbehalten."
+  },
+  "privacy_page": {
+    "title": "Datenschutzerklärung",
+    "subtitle": "Wie wir Ihre Daten verarbeiten"
+  },
+  "cookie_banner": {
+    "text": "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern.",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen"
+  }
+}
