@@ -24,9 +24,9 @@
       </nav>
 
       <!-- Right side: language switcher + hamburger -->
-      <div style="display:flex; align-items:center; gap:0.75rem; flex-shrink:0;">
+      <div class="header-right">
 
-        <!-- Language switcher -->
+        <!-- Language switcher (with SVG flags) -->
         <div class="lang-switcher" id="langSwitcher">
           <button
             class="lang-btn"
@@ -36,22 +36,53 @@
             aria-label="Select language"
             type="button"
           >
-            <span class="flag" id="currentFlag" style="font-size:1.1rem; line-height:1;">🇬🇧</span>
-            <span id="currentLangLabel" style="font-size:0.75rem; font-weight:600; letter-spacing:0.08em;">EN</span>
-            <span class="chevron" aria-hidden="true" style="font-size:0.55rem; margin-left:2px;">▾</span>
+            <span class="flag-icon" id="currentFlag" aria-hidden="true">
+              <!-- UK flag -->
+              <svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+                <clipPath id="t-en"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+                <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t-en)" stroke="#C8102E" stroke-width="4"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+              </svg>
+            </span>
+            <span id="currentLangLabel" class="lang-label">EN</span>
+            <span class="chevron" aria-hidden="true">▾</span>
           </button>
 
           <div class="lang-dropdown" id="langDropdown" role="listbox" aria-label="Languages">
             <div class="lang-option active" role="option" data-lang="en" tabindex="0" aria-selected="true">
-              <span style="font-size:1.1rem;">🇬🇧</span>
+              <span class="flag-icon" aria-hidden="true">
+                <svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+                  <clipPath id="t-en-d"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+                  <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+                  <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                  <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t-en-d)" stroke="#C8102E" stroke-width="4"/>
+                  <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+                  <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+                </svg>
+              </span>
               <span>English</span>
             </div>
             <div class="lang-option" role="option" data-lang="nl" tabindex="0" aria-selected="false">
-              <span style="font-size:1.1rem;">🇳🇱</span>
+              <span class="flag-icon" aria-hidden="true">
+                <svg viewBox="0 0 9 6" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="9" height="2" fill="#AE1C28"/>
+                  <rect y="2" width="9" height="2" fill="#FFFFFF"/>
+                  <rect y="4" width="9" height="2" fill="#21468B"/>
+                </svg>
+              </span>
               <span>Nederlands</span>
             </div>
             <div class="lang-option" role="option" data-lang="de" tabindex="0" aria-selected="false">
-              <span style="font-size:1.1rem;">🇩🇪</span>
+              <span class="flag-icon" aria-hidden="true">
+                <svg viewBox="0 0 5 3" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="5" height="1" fill="#000000"/>
+                  <rect y="1" width="5" height="1" fill="#DD0000"/>
+                  <rect y="2" width="5" height="1" fill="#FFCE00"/>
+                </svg>
+              </span>
               <span>Deutsch</span>
             </div>
           </div>
@@ -89,17 +120,39 @@
   <div class="mobile-menu-bottom">
     <div class="mobile-lang">
       <button class="mobile-lang-btn active" data-lang="en" type="button">
-        <span>🇬🇧</span>&nbsp;EN
+        <span class="flag-icon" aria-hidden="true">
+          <svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+            <clipPath id="t-en-m"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+            <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+            <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+            <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t-en-m)" stroke="#C8102E" stroke-width="4"/>
+            <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+            <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+          </svg>
+        </span>
+        EN
       </button>
       <button class="mobile-lang-btn" data-lang="nl" type="button">
-        <span>🇳🇱</span>&nbsp;NL
+        <span class="flag-icon" aria-hidden="true">
+          <svg viewBox="0 0 9 6" xmlns="http://www.w3.org/2000/svg">
+            <rect width="9" height="2" fill="#AE1C28"/>
+            <rect y="2" width="9" height="2" fill="#FFFFFF"/>
+            <rect y="4" width="9" height="2" fill="#21468B"/>
+          </svg>
+        </span>
+        NL
       </button>
       <button class="mobile-lang-btn" data-lang="de" type="button">
-        <span>🇩🇪</span>&nbsp;DE
+        <span class="flag-icon" aria-hidden="true">
+          <svg viewBox="0 0 5 3" xmlns="http://www.w3.org/2000/svg">
+            <rect width="5" height="1" fill="#000000"/>
+            <rect y="1" width="5" height="1" fill="#DD0000"/>
+            <rect y="2" width="5" height="1" fill="#FFCE00"/>
+          </svg>
+        </span>
+        DE
       </button>
     </div>
-    <p style="font-size:0.72rem; color:rgba(255,255,255,0.3); font-family:var(--font-sans); letter-spacing:0.12em; text-transform:uppercase; margin-top:0.75rem;">
-      Waterfords Cocktails
-    </p>
+    <p class="mobile-menu-brand">Waterfords Cocktails</p>
   </div>
 </div>

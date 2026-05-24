@@ -2,30 +2,19 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Contact Us | Waterfords Cocktails</title>
-  <meta name="description" content="Get in touch with Waterfords Cocktails. Interested in stocking our Italian Spritz 0.0%? Contact us for retail, hospitality, wholesale, or direct orders." />
+  <meta name="description" content="Get in touch with Waterfords Cocktails for retail, hospitality, wholesale, or direct orders." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://waterfordscocktails.com/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:title" content="Contact | Waterfords Cocktails" />
+  <meta property="og:description" content="Reach out for retail, hospitality, wholesale enquiries or direct orders." />
+  <meta property="og:url" content="https://waterfordscocktails.com/contact.html" />
+  <meta property="og:image" content="https://waterfordscocktails.com/assets/images/og-image.webp" />
 
-  <!-- Open Graph -->
-  <meta property="og:type"        content="website" />
-  <meta property="og:locale"      content="en_GB" />
-  <meta property="og:title"       content="Contact | Waterfords Cocktails" />
-  <meta property="og:description" content="Reach out to us for retail, hospitality, wholesale enquiries or direct orders." />
-  <meta property="og:url"         content="https://waterfordscocktails.com/contact.html" />
-  <meta property="og:image"       content="https://waterfordscocktails.com/assets/images/og-image.webp" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Contact | Waterfords Cocktails" />
-  <meta name="twitter:description" content="Get in touch for retail, wholesale and direct orders." />
-  <meta name="twitter:image"       content="https://waterfordscocktails.com/assets/images/og-image.webp" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="assets/images/favicon.ico" />
-
-  <!-- Stylesheet -->
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -34,7 +23,6 @@
 
   <main>
 
-    <!-- ── PAGE HERO ── -->
     <div class="page-hero">
       <div class="container">
         <span class="section-label section-label--white" data-i18n="contact_page.label">Get in Touch</span>
@@ -43,102 +31,47 @@
       </div>
     </div>
 
-    <!-- ── CONTACT GRID ── -->
     <section class="section" aria-labelledby="contact-heading">
       <div class="container">
         <div class="contact-grid">
 
-          <!-- Form -->
           <div class="reveal">
             <span class="section-label" data-i18n="contact_page.label">Contact</span>
             <h2 id="contact-heading" style="color:var(--clr-navy); margin-bottom:0.5rem;" data-i18n="contact_page.title">Contact Waterfords</h2>
             <p style="margin-bottom:2rem;" data-i18n="contact_page.text">We'd love to hear from you.</p>
 
-            <form
-              id="contact-form"
-              action="https://formspree.io/f/YOUR_FORM_ID"
-              method="POST"
-              class="contact-form"
-              novalidate
-            >
+            <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form" novalidate>
               <div class="form-group">
                 <label for="contact-name" data-i18n="contact_page.name">Your Name</label>
-                <input
-                  type="text"
-                  id="contact-name"
-                  name="name"
-                  required
-                  autocomplete="name"
-                  data-i18n-placeholder="contact_page.name"
-                  placeholder="Your Name"
-                />
+                <input type="text" id="contact-name" name="name" required autocomplete="name" data-i18n-placeholder="contact_page.name" placeholder="Your Name" />
               </div>
-
               <div class="form-group">
                 <label for="contact-email" data-i18n="contact_page.email">Your Email</label>
-                <input
-                  type="email"
-                  id="contact-email"
-                  name="email"
-                  required
-                  autocomplete="email"
-                  data-i18n-placeholder="contact_page.email"
-                  placeholder="Your Email"
-                />
+                <input type="email" id="contact-email" name="email" required autocomplete="email" data-i18n-placeholder="contact_page.email" placeholder="Your Email" />
               </div>
-
               <div class="form-group">
                 <label for="contact-company" data-i18n="contact_page.company">Company (optional)</label>
-                <input
-                  type="text"
-                  id="contact-company"
-                  name="company"
-                  autocomplete="organization"
-                  data-i18n-placeholder="contact_page.company"
-                  placeholder="Company (optional)"
-                />
+                <input type="text" id="contact-company" name="company" autocomplete="organization" data-i18n-placeholder="contact_page.company" placeholder="Company (optional)" />
               </div>
-
               <div class="form-group">
                 <label for="contact-message" data-i18n="contact_page.message">Your Message</label>
-                <textarea
-                  id="contact-message"
-                  name="message"
-                  required
-                  data-i18n-placeholder="contact_page.message"
-                  placeholder="Your Message"
-                ></textarea>
+                <textarea id="contact-message" name="message" required data-i18n-placeholder="contact_page.message" placeholder="Your Message"></textarea>
               </div>
-
-              <!-- Honeypot (spam protection) -->
               <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off" />
 
-              <div id="form-success" class="form-success" role="alert" data-i18n="contact_page.success">
-                Thank you! We'll be in touch soon.
-              </div>
+              <div id="form-success" class="form-success" role="alert" data-i18n="contact_page.success">Thank you! We'll be in touch soon.</div>
 
-              <button
-                type="submit"
-                class="btn btn-primary btn-arrow"
-                data-i18n="contact_page.send"
-                data-sending-i18n="contact_page.sending"
-                data-sending="Sending..."
-              >
-                Send Message
-              </button>
+              <button type="submit" class="btn btn-primary btn-arrow" data-i18n="contact_page.send" data-sending="Sending...">Send Message</button>
             </form>
           </div>
 
-          <!-- Info + map -->
           <div class="contact-info reveal reveal-delay-2">
-            <span class="section-label" data-i18n="contact_page.label">Our Details</span>
-            <h3 style="color:var(--clr-navy); margin-bottom:1.5rem;">Find us here</h3>
+            <span class="section-label" data-i18n="contact_page.details_label">Our Details</span>
+            <h3 style="color:var(--clr-navy); margin-bottom:1.5rem;" data-i18n="contact_page.find_us">Find us here</h3>
 
             <div class="contact-info-item">
               <div class="contact-info-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                </svg>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
               </div>
               <div class="contact-info-text">
                 <strong data-i18n="contact_page.address_label">Address</strong>
@@ -150,21 +83,17 @@
 
             <div class="contact-info-item">
               <div class="contact-info-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                </svg>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
               </div>
               <div class="contact-info-text">
                 <strong data-i18n="contact_page.phone_label">Phone</strong>
-                <a href="tel:+31631525631">+31 6 31525631</a>
+                <a href="tel:+31631525631">+31 6 315 256 31</a>
               </div>
             </div>
 
             <div class="contact-info-item">
               <div class="contact-info-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                </svg>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
               </div>
               <div class="contact-info-text">
                 <strong data-i18n="contact_page.email_label">Email</strong>
@@ -172,17 +101,8 @@
               </div>
             </div>
 
-            <!-- Google Maps -->
             <div class="map-wrapper">
-              <iframe
-                title="Waterfords Cocktails location map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2452.278897854929!2d4.308977!3d52.074567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b736e46ec12b%3A0xc29ce3d27ccb3cb3!2sHoge%20Zand%2039%2C%202512%20EL%20Den%20Haag!5e0!3m2!1snl!2snl!4v1700000000000!5m2!1snl!2snl"
-                width="600"
-                height="280"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                allowfullscreen
-              ></iframe>
+              <iframe title="Waterfords location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2452.278897854929!2d4.308977!3d52.074567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b736e46ec12b%3A0xc29ce3d27ccb3cb3!2sHoge%20Zand%2039%2C%202512%20EL%20Den%20Haag!5e0!3m2!1snl!2snl!4v1700000000000!5m2!1snl!2snl" width="600" height="280" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
             </div>
           </div>
 
@@ -190,11 +110,10 @@
       </div>
     </section>
 
-    <!-- ── CTA ── -->
     <section class="cta-strip" aria-label="Call to action">
       <div class="container">
-        <h2 class="reveal">Want to stock Waterfords?</h2>
-        <p class="reveal reveal-delay-1">We supply retail, hospitality, wholesale and direct consumers across the Netherlands.</p>
+        <h2 class="reveal" data-i18n="contact_page.cta_title">Want to stock Waterfords?</h2>
+        <p class="reveal reveal-delay-1" data-i18n="contact_page.cta_text">We supply retail, hospitality, wholesale and direct consumers.</p>
         <div class="reveal reveal-delay-2">
           <a href="where-to-buy.html" class="btn btn-outline" data-i18n="nav.where">Where to Buy</a>
         </div>

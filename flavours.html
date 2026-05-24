@@ -2,182 +2,59 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Italian Spritz 0.0% – Our Flavours | Waterfords Cocktails</title>
-  <meta name="description" content="Discover the Waterfords Italian Spritz 0.0%. A refined mix of aromatic herbs, fruity citrus and bittersweet refreshment — available in a convenient 250ml can." />
+  <meta name="description" content="Discover the Waterfords Italian Spritz 0.0%. A refined mix of aromatic herbs, fruity citrus and bittersweet refreshment in a 250ml can." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://waterfordscocktails.com/flavours.html" />
-
-  <!-- Open Graph -->
-  <meta property="og:type"        content="website" />
-  <meta property="og:locale"      content="en_GB" />
-  <meta property="og:title"       content="Italian Spritz 0.0% – Our Flavours | Waterfords Cocktails" />
-  <meta property="og:description" content="Refined, alcohol-free Italian Spritz. Aromatic herbs, fruity citrus, bittersweet refreshment — 250ml can." />
-  <meta property="og:url"         content="https://waterfordscocktails.com/flavours.html" />
-  <meta property="og:image"       content="https://waterfordscocktails.com/assets/images/og-image.webp" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Italian Spritz 0.0% | Waterfords Cocktails" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:title" content="Italian Spritz 0.0% | Waterfords Cocktails" />
+  <meta property="og:description" content="Refined alcohol-free Italian Spritz. Aromatic herbs, fruity citrus, bittersweet refreshment." />
+  <meta property="og:url" content="https://waterfordscocktails.com/flavours.html" />
+  <meta property="og:image" content="https://waterfordscocktails.com/assets/images/og-image.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Italian Spritz 0.0% | Waterfords Cocktails" />
   <meta name="twitter:description" content="Refined alcohol-free Italian Spritz — 250ml can, 0.0% alcohol." />
-  <meta name="twitter:image"       content="https://waterfordscocktails.com/assets/images/og-image.webp" />
+  <meta name="twitter:image" content="https://waterfordscocktails.com/assets/images/og-image.webp" />
 
-  <!-- Favicon -->
-  <link rel="icon" href="assets/images/favicon.ico" />
-
-  <!-- Stylesheet -->
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* ── Product image gallery ── */
-    .product-gallery {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto;
-      gap: 1rem;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-    }
-
-    .product-gallery-main {
-      grid-column: 1;
-      grid-row: 1 / 3;
-      aspect-ratio: 3/4;
-      overflow: hidden;
-      border-radius: var(--radius-lg);
-    }
-
-    .product-gallery-main img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.8s var(--ease-out);
-    }
-
+    .product-gallery { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 1rem; border-radius: var(--radius-lg); overflow: hidden; }
+    .product-gallery-main { grid-column: 1; grid-row: 1 / 3; aspect-ratio: 3/4; overflow: hidden; border-radius: var(--radius-lg); }
+    .product-gallery-main img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease-out); }
     .product-gallery-main:hover img { transform: scale(1.04); }
-
-    .product-gallery-thumb {
-      aspect-ratio: 4/3;
-      overflow: hidden;
-      border-radius: var(--radius-md);
-    }
-
-    .product-gallery-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.8s var(--ease-out);
-    }
-
+    .product-gallery-thumb { aspect-ratio: 4/3; overflow: hidden; border-radius: var(--radius-md); }
+    .product-gallery-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease-out); }
     .product-gallery-thumb:hover img { transform: scale(1.06); }
-
-    /* Taste profile */
-    .taste-profile {
-      background: var(--clr-off-white);
-      border-radius: var(--radius-lg);
-      padding: 2.5rem;
-      margin: 2.5rem 0;
-    }
-
+    .taste-profile { background: var(--clr-off-white); border-radius: var(--radius-lg); padding: 2.5rem; margin: 2.5rem 0; }
     .taste-bars { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
-
-    .taste-bar-row {
-      display: grid;
-      grid-template-columns: 120px 1fr 32px;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .taste-bar-label {
-      font-family: var(--font-sans);
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--clr-navy);
-    }
-
-    .taste-bar-track {
-      height: 6px;
-      background: var(--clr-mid-grey);
-      border-radius: 3px;
-      overflow: hidden;
-    }
-
-    .taste-bar-fill {
-      height: 100%;
-      background: linear-gradient(to right, var(--clr-spritz), var(--clr-spritz-light));
-      border-radius: 3px;
-      width: 0;
-      transition: width 1s var(--ease-out);
-    }
-
+    .taste-bar-row { display: grid; grid-template-columns: 120px 1fr 32px; align-items: center; gap: 1rem; }
+    .taste-bar-label { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--clr-navy); }
+    .taste-bar-track { height: 6px; background: var(--clr-mid-grey); border-radius: 3px; overflow: hidden; }
+    .taste-bar-fill { height: 100%; background: linear-gradient(to right, var(--clr-spritz), var(--clr-spritz-light)); border-radius: 3px; width: 0; transition: width 1s var(--ease-out); }
     .taste-bar-fill.animated { width: var(--fill-width); }
-
-    .taste-bar-val {
-      font-family: var(--font-sans);
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--clr-spritz);
-      text-align: right;
-    }
-
-    /* Serve suggestions */
-    .serve-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin: 2rem 0;
-    }
-
-    .serve-card {
-      padding: 1.75rem 1.5rem;
-      border-radius: var(--radius-lg);
-      background: var(--clr-white);
-      border: 1px solid var(--clr-mid-grey);
-      text-align: center;
-      transition: all var(--duration) var(--ease-out);
-    }
-
-    .serve-card:hover {
-      border-color: var(--clr-spritz);
-      transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-    }
-
-    .serve-icon {
-      font-size: 2rem;
-      margin-bottom: 0.75rem;
-    }
-
+    .taste-bar-val { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; color: var(--clr-spritz); text-align: right; }
+    .serve-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem 0; }
+    .serve-card { padding: 1.75rem 1.5rem; border-radius: var(--radius-lg); background: var(--clr-white); border: 1px solid var(--clr-mid-grey); text-align: center; transition: all var(--duration) var(--ease-out); }
+    .serve-card:hover { border-color: var(--clr-spritz); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+    .serve-icon { font-size: 2rem; margin-bottom: 0.75rem; }
     .serve-card h4 { color: var(--clr-navy); font-size: 1rem; margin-bottom: 0.4rem; }
-    .serve-card p  { font-size: 0.83rem; }
-
-    /* Ingredients strip */
-    .ingredients-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin: 1.5rem 0;
-    }
-
-    .ingredient-pill {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.5rem 1rem;
-      border-radius: var(--radius-full);
-      background: linear-gradient(135deg, var(--clr-spritz), var(--clr-spritz-light));
-      color: var(--clr-white);
-      font-family: var(--font-sans);
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
+    .serve-card p { font-size: 0.83rem; }
+    .ingredients-strip { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.5rem 0; }
+    .ingredient-pill { display: flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: var(--radius-full); background: linear-gradient(135deg, var(--clr-spritz), var(--clr-spritz-light)); color: var(--clr-white); font-family: var(--font-sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+    .product-grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
     @media (max-width: 768px) {
-      .product-gallery { grid-template-columns: 1fr; grid-template-rows: auto; }
+      .product-grid-2col { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+      .product-grid-2col .product-badges,
+      .product-grid-2col .ingredients-strip,
+      .product-grid-2col .flavour-tags { justify-content: center; }
+      .product-grid-2col > div { display: flex; flex-direction: column; align-items: center; }
+      .product-grid-2col p { text-align: center; }
+      .product-grid-2col .taste-profile { width: 100%; }
+      .product-gallery { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
       .product-gallery-main { grid-row: 1; aspect-ratio: 4/3; }
       .serve-grid { grid-template-columns: 1fr; }
       .taste-bar-row { grid-template-columns: 90px 1fr 28px; }
@@ -190,7 +67,6 @@
 
   <main>
 
-    <!-- ── PAGE HERO ── -->
     <div class="page-hero">
       <div class="container">
         <span class="section-label section-label--white" data-i18n="product.label">Our Flavours</span>
@@ -199,45 +75,24 @@
       </div>
     </div>
 
-    <!-- ── PRODUCT DETAIL ── -->
     <section class="section" aria-labelledby="product-heading">
       <div class="container">
-        <div class="product-hero-inner" style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start;">
+        <div class="product-grid-2col">
 
-          <!-- Gallery -->
           <div class="reveal">
             <div class="product-gallery">
               <div class="product-gallery-main">
-                <img
-                  src="assets/images/flavours/italian_spritz_1.jpg"
-                  alt="Waterfords Italian Spritz can and glass on wooden crate with botanicals"
-                  width="800"
-                  height="1067"
-                  loading="eager"
-                />
+                <img src="assets/images/flavours/italian_spritz_1.jpg" alt="Waterfords Italian Spritz can and glass" width="800" height="1067" loading="eager" />
               </div>
               <div class="product-gallery-thumb">
-                <img
-                  src="assets/images/flavours/italian_spritz_2.jpg"
-                  alt="Person pouring Waterfords Italian Spritz into a wine glass"
-                  width="800"
-                  height="600"
-                  loading="lazy"
-                />
+                <img src="assets/images/flavours/italian_spritz_2.jpg" alt="Pouring Waterfords Italian Spritz" width="800" height="600" loading="lazy" />
               </div>
               <div class="product-gallery-thumb">
-                <img
-                  src="assets/images/flavours/italian_spritz_5.jpg"
-                  alt="Waterfords Italian Spritz can close-up label detail"
-                  width="800"
-                  height="600"
-                  loading="lazy"
-                />
+                <img src="assets/images/flavours/italian_spritz_5.jpg" alt="Waterfords Italian Spritz close-up" width="800" height="600" loading="lazy" />
               </div>
             </div>
           </div>
 
-          <!-- Product info -->
           <div class="reveal reveal-delay-2">
             <span class="section-label" data-i18n="product.label">Our Flavours</span>
             <h2 id="product-heading" style="color:var(--clr-navy); margin-bottom:1rem;" data-i18n="product.title">Italian Spritz 0.0%</h2>
@@ -249,140 +104,111 @@
               <span class="product-tag" style="background:rgba(23,49,93,0.06); border-color:rgba(23,49,93,0.2); color:var(--clr-navy);" data-i18n="product.badge4">Sparkling</span>
             </div>
 
-            <p style="margin-bottom:1.5rem;" data-i18n="product.desc">
-              Italian sparkle in our alcohol-free Italian Spritz can. A refined mix of aromatic herbs, fruity citrus, and bittersweet refreshment for festive occasions, relaxation, or pure indulgence. The convenient can brings the refined flavors of Italy directly to your glass for a moment of joyful indulgence.
-            </p>
+            <p style="margin-bottom:1.5rem;" data-i18n="product.desc">Italian sparkle in our alcohol-free Italian Spritz can.</p>
 
-            <!-- Flavour ingredients -->
             <div class="ingredients-strip">
-              <span class="ingredient-pill">🌿 Aromatic Herbs</span>
-              <span class="ingredient-pill">🍊 Fruity Citrus</span>
-              <span class="ingredient-pill">✨ Bittersweet</span>
-              <span class="ingredient-pill">🫧 Sparkling</span>
+              <span class="ingredient-pill">🌿 <span data-i18n="flavours_page.ing_herbs">Aromatic Herbs</span></span>
+              <span class="ingredient-pill">🍊 <span data-i18n="flavours_page.ing_citrus">Fruity Citrus</span></span>
+              <span class="ingredient-pill">✨ <span data-i18n="flavours_page.ing_bittersweet">Bittersweet</span></span>
+              <span class="ingredient-pill">🫧 <span data-i18n="flavours_page.ing_sparkling">Sparkling</span></span>
             </div>
 
-            <!-- Taste profile -->
             <div class="taste-profile">
-              <h4 style="color:var(--clr-navy); margin-bottom:0.25rem;">Taste Profile</h4>
-              <p style="font-size:0.85rem; margin-bottom:0;">How our Italian Spritz feels in the glass.</p>
+              <h4 style="color:var(--clr-navy); margin-bottom:0.25rem;" data-i18n="flavours_page.taste_title">Taste Profile</h4>
+              <p style="font-size:0.85rem; margin-bottom:0;" data-i18n="flavours_page.taste_text">How our Italian Spritz feels in the glass.</p>
               <div class="taste-bars">
                 <div class="taste-bar-row">
-                  <span class="taste-bar-label">Citrus</span>
+                  <span class="taste-bar-label" data-i18n="flavours_page.taste_citrus">Citrus</span>
                   <div class="taste-bar-track"><div class="taste-bar-fill" style="--fill-width:80%;"></div></div>
                   <span class="taste-bar-val">80%</span>
                 </div>
                 <div class="taste-bar-row">
-                  <span class="taste-bar-label">Herbal</span>
+                  <span class="taste-bar-label" data-i18n="flavours_page.taste_herbal">Herbal</span>
                   <div class="taste-bar-track"><div class="taste-bar-fill" style="--fill-width:70%;"></div></div>
                   <span class="taste-bar-val">70%</span>
                 </div>
                 <div class="taste-bar-row">
-                  <span class="taste-bar-label">Bittersweet</span>
+                  <span class="taste-bar-label" data-i18n="flavours_page.taste_bittersweet">Bittersweet</span>
                   <div class="taste-bar-track"><div class="taste-bar-fill" style="--fill-width:60%;"></div></div>
                   <span class="taste-bar-val">60%</span>
                 </div>
                 <div class="taste-bar-row">
-                  <span class="taste-bar-label">Fizz</span>
+                  <span class="taste-bar-label" data-i18n="flavours_page.taste_fizz">Fizz</span>
                   <div class="taste-bar-track"><div class="taste-bar-fill" style="--fill-width:90%;"></div></div>
                   <span class="taste-bar-val">90%</span>
                 </div>
               </div>
             </div>
 
-            <a href="where-to-buy.html" class="btn btn-primary btn-arrow" data-i18n="where_page.cta">Find Where to Buy</a>
+            <a href="where-to-buy.html" class="btn btn-primary btn-arrow" data-i18n="flavours_page.find">Find Where to Buy</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ── SERVE SUGGESTIONS ── -->
     <section class="section section-light" aria-labelledby="serve-heading">
       <div class="container">
         <div style="text-align:center; max-width:560px; margin:0 auto 2.5rem;" class="reveal">
-          <span class="section-label">Serve suggestions</span>
-          <h2 id="serve-heading" style="color:var(--clr-navy);">Perfect for every occasion</h2>
+          <span class="section-label" data-i18n="flavours_page.serve_label">Serve suggestions</span>
+          <h2 id="serve-heading" style="color:var(--clr-navy);" data-i18n="flavours_page.serve_title">Perfect for every occasion</h2>
         </div>
         <div class="serve-grid">
           <div class="serve-card reveal">
-            <div class="serve-icon">🥂</div>
-            <h4>Festive Occasions</h4>
-            <p>Raise a glass at weddings, birthdays, or celebrations — without the alcohol.</p>
+            <div class="serve-icon" aria-hidden="true">🥂</div>
+            <h4 data-i18n="flavours_page.serve1_title">Festive Occasions</h4>
+            <p data-i18n="flavours_page.serve1_text">Raise a glass at weddings, birthdays, or celebrations.</p>
           </div>
           <div class="serve-card reveal reveal-delay-2">
-            <div class="serve-icon">🛋️</div>
-            <h4>Relaxation</h4>
-            <p>Unwind after a long day with the refined flavours of Italy in every sip.</p>
+            <div class="serve-icon" aria-hidden="true">🛋️</div>
+            <h4 data-i18n="flavours_page.serve2_title">Relaxation</h4>
+            <p data-i18n="flavours_page.serve2_text">Unwind after a long day with the refined flavours.</p>
           </div>
           <div class="serve-card reveal reveal-delay-3">
-            <div class="serve-icon">🍊</div>
-            <h4>Pure Indulgence</h4>
-            <p>Pour over ice into a wine glass and garnish with an orange slice for the full experience.</p>
+            <div class="serve-icon" aria-hidden="true">🍊</div>
+            <h4 data-i18n="flavours_page.serve3_title">Pure Indulgence</h4>
+            <p data-i18n="flavours_page.serve3_text">Pour over ice in a wine glass with an orange slice.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ── MORE PHOTOS ── -->
     <section class="section" aria-label="Product gallery">
       <div class="container">
         <div style="text-align:center; margin-bottom:2.5rem;" class="reveal">
-          <span class="section-label">Gallery</span>
-          <h2 style="color:var(--clr-navy);">See it in context</h2>
+          <span class="section-label" data-i18n="flavours_page.gallery_label">Gallery</span>
+          <h2 style="color:var(--clr-navy);" data-i18n="flavours_page.gallery_title">See it in context</h2>
         </div>
         <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem;">
-          <div class="about-snippet-img reveal" style="aspect-ratio:3/4; border-radius:var(--radius-lg);">
-            <img
-              src="assets/images/flavours/italian_spritz_3.jpg"
-              alt="Waterfords Italian Spritz can with oranges in warm sunlight on marble table"
-              width="600"
-              height="800"
-              loading="lazy"
-              style="width:100%; height:100%; object-fit:cover;"
-            />
+          <div class="reveal" style="aspect-ratio:3/4; border-radius:var(--radius-lg); overflow:hidden;">
+            <img src="assets/images/flavours/italian_spritz_3.jpg" alt="Italian Spritz with oranges" width="600" height="800" loading="lazy" style="width:100%; height:100%; object-fit:cover;" />
           </div>
-          <div class="about-snippet-img reveal reveal-delay-2" style="aspect-ratio:3/4; border-radius:var(--radius-lg);">
-            <img
-              src="assets/images/flavours/italian_spritz_2.jpg"
-              alt="Person pouring Waterfords Italian Spritz from can into wine glass"
-              width="600"
-              height="800"
-              loading="lazy"
-              style="width:100%; height:100%; object-fit:cover;"
-            />
+          <div class="reveal reveal-delay-2" style="aspect-ratio:3/4; border-radius:var(--radius-lg); overflow:hidden;">
+            <img src="assets/images/flavours/italian_spritz_2.jpg" alt="Pouring Italian Spritz" width="600" height="800" loading="lazy" style="width:100%; height:100%; object-fit:cover;" />
           </div>
-          <div class="about-snippet-img reveal reveal-delay-3" style="aspect-ratio:3/4; border-radius:var(--radius-lg);">
-            <img
-              src="assets/images/flavours/Italian_Spritz_klein.jpg"
-              alt="Waterfords Italian Spritz small can product shot"
-              width="600"
-              height="800"
-              loading="lazy"
-              style="width:100%; height:100%; object-fit:cover; object-position:center;"
-            />
+          <div class="reveal reveal-delay-3" style="aspect-ratio:3/4; border-radius:var(--radius-lg); overflow:hidden;">
+            <img src="assets/images/flavours/Italian_Spritz_klein.jpg" alt="Italian Spritz product shot" width="600" height="800" loading="lazy" style="width:100%; height:100%; object-fit:cover;" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ── COMING SOON ── -->
     <section class="section section-light" aria-labelledby="coming-heading">
       <div class="container" style="text-align:center; max-width:640px; margin:0 auto;">
         <div class="reveal">
-          <span class="section-label" data-i18n="product.coming_label">Coming Soon</span>
-          <h2 id="coming-heading" style="color:var(--clr-navy);" data-i18n="product.coming_title">New Spritz Variants</h2>
-          <p data-i18n="product.coming_text">We are continuously developing new expressions. More exciting alcohol-free Spritz varieties are on their way.</p>
-          <a href="contact.html" class="btn btn-outline-dark btn-arrow" style="margin-top:1.5rem;">Stay Updated</a>
+          <span class="section-label" data-i18n="flavours_page.coming_label">Coming Soon</span>
+          <h2 id="coming-heading" style="color:var(--clr-navy);" data-i18n="flavours_page.coming_title">New Spritz Variants</h2>
+          <p data-i18n="flavours_page.coming_text">We are continuously developing new expressions.</p>
+          <a href="contact.html" class="btn btn-outline-dark btn-arrow" style="margin-top:1.5rem;" data-i18n="flavours_page.coming_cta">Stay Updated</a>
         </div>
       </div>
     </section>
 
-    <!-- ── CTA ── -->
     <section class="cta-strip" aria-label="Call to action">
       <div class="container">
-        <h2 class="reveal">Ready to try Waterfords?</h2>
-        <p class="reveal reveal-delay-1">Find us at retail, hospitality, and online — or order directly.</p>
+        <h2 class="reveal" data-i18n="flavours_page.cta_title">Ready to try Waterfords?</h2>
+        <p class="reveal reveal-delay-1" data-i18n="flavours_page.cta_text">Find us at retail, hospitality, and online.</p>
         <div class="reveal reveal-delay-2">
-          <a href="where-to-buy.html" class="btn btn-outline" data-i18n="where_page.cta">Find Where to Buy</a>
+          <a href="where-to-buy.html" class="btn btn-outline" data-i18n="flavours_page.find">Find Where to Buy</a>
         </div>
       </div>
     </section>
@@ -401,7 +227,6 @@
 
   <script src="js/script.js" defer></script>
   <script>
-    // Animate taste bars on scroll
     const tasteFills = document.querySelectorAll('.taste-bar-fill');
     const barObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {

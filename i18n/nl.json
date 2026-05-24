@@ -18,7 +18,8 @@
     "label": "Over Waterfords",
     "title": "Gemaakt voor wie bewust kiest",
     "text": "Wij geloven dat verfijning niets met alcohol te maken heeft. Bij Waterfords Cocktails maken wij premium ready-to-drink cocktails die de volledige beleving bieden — de smaak, het ritueel, het moment — volledig alcoholvrij.",
-    "cta": "Ons Verhaal"
+    "cta": "Ons Verhaal",
+    "badge_text": "Alcohol"
   },
   "product": {
     "label": "Onze Smaken",
@@ -29,9 +30,8 @@
     "badge3": "Ready to Drink",
     "badge4": "Bruisend",
     "cta": "Ontdek",
-    "coming_label": "Binnenkort",
-    "coming_title": "Nieuwe Spritz Varianten",
-    "coming_text": "Wij zijn voortdurend bezig met het ontwikkelen van nieuwe expressies. Meer spannende alcoholvrije Spritz varianten zijn onderweg."
+    "coming_soon": "Meer Spritz varianten",
+    "coming_soon_full": "Meer spannende Spritz varianten zijn binnenkort beschikbaar."
   },
   "video": {
     "label": "Met zorg gemaakt",
@@ -41,11 +41,16 @@
   "retailers": {
     "label": "Waar te Vinden",
     "title": "Verkrijgbaar bij",
-    "text": "Wij leveren aan retail, horeca, groothandels en rechtstreeks aan consumenten. Vind Waterfords bij deze betrouwbare partners."
+    "text": "Wij leveren aan retail, horeca, groothandels en rechtstreeks aan consumenten."
+  },
+  "cta_strip": {
+    "title": "Proef de toekomst van verfijnde dranken",
+    "text": "Zonder alcohol, maar met volle smaak. Vind Waterfords Italian Spritz bij jou in de buurt."
   },
   "about_page": {
     "label": "Ons Verhaal",
     "title": "Wij zijn Waterfords Cocktails",
+    "subtitle": "Opgericht met één duidelijke missie: premium alcoholvrije cocktails die geen concessies doen.",
     "text1": "Waterfords Cocktails is opgericht met één duidelijke missie: premium alcoholvrije cocktails maken die geen concessies doen aan smaak, elegantie of beleving. Wij geloven dat de toekomst van verfijnd drinken er één is waarbij iedereen — chauffeurs, ouders, sporters en mensen die simpelweg niet willen drinken — trots een glas kunnen heffen.",
     "text2": "Onze Italian Spritz is het resultaat van maanden van zorgvuldige ontwikkeling. Een verfijnde mix van aromatische kruiden, fruitige citrus en bitterzoetige verfrissing, verpakt in ons kenmerkende 250ml blikje. Wij zijn gevestigd in Den Haag en leveren aan retailers, horecagelegenheden, groothandels en rechtstreeks aan consumenten door heel Nederland.",
     "text3": "We zijn trots op wat we bouwen, en we zijn nog maar net begonnen.",
@@ -56,12 +61,50 @@
     "v2_text": "Openen, inschenken, genieten. Geen mixen, geen gedoe.",
     "v3_title": "Voor Iedereen",
     "v3_text": "Of je nu rijdt, traint of gewoon scherp wilt blijven — onze dranken zijn voor jou.",
-    "cta": "Ontdek Italian Spritz"
+    "cta": "Ontdek Italian Spritz",
+    "founder_label": "Het Team",
+    "founder_name": "Timo",
+    "founder_role": "Oprichter, Waterfords Cocktails",
+    "founder_p1": "Achter elk blikje Waterfords staat een team met een oprechte passie voor premium dranken en de overtuiging dat alcoholvrij gaan nooit smaakloos hoeft te zijn.",
+    "founder_p2": "Wij hebben Waterfords gebouwd omdat we een gat in de markt zagen: ready-to-drink cocktails die er premium uitzien, premium smaken, en toevallig nul alcohol bevatten. Onze Italian Spritz is nog maar het begin.",
+    "founder_p3": "Gevestigd in Den Haag bedienen wij retail, horeca, groothandel en consumenten door heel Nederland — en we groeien snel.",
+    "founder_cta": "Neem Contact Op",
+    "cta_strip_title": "Klaar om Waterfords te ervaren?",
+    "cta_strip_text": "Ontdek onze Italian Spritz of vind waar je deze kunt kopen bij jou in de buurt."
+  },
+  "flavours_page": {
+    "find": "Vind Waar te Koop",
+    "serve_label": "Serveer suggesties",
+    "serve_title": "Perfect voor elke gelegenheid",
+    "serve1_title": "Feestelijke Gelegenheden",
+    "serve1_text": "Hef het glas bij bruiloften, verjaardagen of feesten — zonder alcohol.",
+    "serve2_title": "Ontspanning",
+    "serve2_text": "Ontspan na een lange dag met de verfijnde smaken van Italië in elke slok.",
+    "serve3_title": "Pure Verwennerij",
+    "serve3_text": "Schenk over ijs in een wijnglas en garneer met een schijfje sinaasappel voor de volledige beleving.",
+    "gallery_label": "Galerij",
+    "gallery_title": "Zie het in context",
+    "taste_title": "Smaakprofiel",
+    "taste_text": "Hoe onze Italian Spritz voelt in het glas.",
+    "taste_citrus": "Citrus",
+    "taste_herbal": "Kruidig",
+    "taste_bittersweet": "Bitterzoet",
+    "taste_fizz": "Bruising",
+    "ing_herbs": "Aromatische Kruiden",
+    "ing_citrus": "Fruitige Citrus",
+    "ing_bittersweet": "Bitterzoet",
+    "ing_sparkling": "Bruisend",
+    "coming_label": "Binnenkort",
+    "coming_title": "Nieuwe Spritz Varianten",
+    "coming_text": "Wij zijn voortdurend bezig met het ontwikkelen van nieuwe expressies. Meer spannende alcoholvrije Spritz varianten zijn onderweg.",
+    "coming_cta": "Blijf op de Hoogte",
+    "cta_title": "Klaar om Waterfords te proberen?",
+    "cta_text": "Vind ons in retail, horeca en online — of bestel direct."
   },
   "where_page": {
     "label": "Waar te Koop",
     "title": "Vind Waterfords bij jou in de buurt",
-    "text": "Waterfords Italian Spritz is verkrijgbaar via retail, horeca en groothandelskanalen in Nederland. Wij verkopen ook rechtstreeks aan consumenten. Op zoek naar een specifieke retailer of wil je ons assortiment opnemen? Neem contact op.",
+    "text": "Waterfords Italian Spritz is verkrijgbaar via retail, horeca en groothandelskanalen in Nederland. Wij verkopen ook rechtstreeks aan consumenten.",
     "channels_label": "Wij leveren aan",
     "ch1": "Retail",
     "ch1_text": "Supermarkten en speciaalzaken.",
@@ -71,7 +114,12 @@
     "ch3_text": "Distributeurs en cash & carry.",
     "ch4": "Direct",
     "ch4_text": "Bestel rechtstreeks bij ons.",
-    "cta": "Neem Contact Op"
+    "cta": "Neem Contact Op",
+    "partner_label": "Word partner",
+    "partner_title": "Geïnteresseerd in het voeren van Waterfords?",
+    "partner_text": "Of je nu een restaurant, bar, hotel, winkel of groothandel runt — we horen graag van je. Wij bieden concurrerende groothandelsprijzen en flexibele leveringsmogelijkheden.",
+    "cta_title": "Nog niet zeker?",
+    "cta_text": "Leer meer over onze Italian Spritz 0.0% en ontdek de smaak zelf."
   },
   "contact_page": {
     "label": "Neem Contact Op",
@@ -86,7 +134,11 @@
     "success": "Bedankt! Wij nemen snel contact met je op.",
     "address_label": "Adres",
     "phone_label": "Telefoon",
-    "email_label": "E-mail"
+    "email_label": "E-mail",
+    "details_label": "Onze Gegevens",
+    "find_us": "Hier vind je ons",
+    "cta_title": "Waterfords voeren?",
+    "cta_text": "Wij leveren aan retail, horeca, groothandel en consumenten door heel Nederland."
   },
   "footer": {
     "tagline": "De toekomst van verfijnde dranken, zonder alcohol.",

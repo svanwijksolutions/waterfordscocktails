@@ -18,7 +18,8 @@
     "label": "About Waterfords",
     "title": "Crafted for those who choose differently",
     "text": "We believe that sophistication has nothing to do with alcohol. At Waterfords Cocktails, we craft premium ready-to-drink cocktails that deliver the full experience — the taste, the ritual, the moment — completely alcohol-free.",
-    "cta": "Our Story"
+    "cta": "Our Story",
+    "badge_text": "Alcohol"
   },
   "product": {
     "label": "Our Flavours",
@@ -29,9 +30,8 @@
     "badge3": "Ready to Drink",
     "badge4": "Sparkling",
     "cta": "Discover",
-    "coming_label": "Coming Soon",
-    "coming_title": "New Spritz Variants",
-    "coming_text": "We are continuously developing new expressions. More exciting alcohol-free Spritz varieties are on their way."
+    "coming_soon": "More Spritz variants",
+    "coming_soon_full": "More exciting Spritz variants coming soon."
   },
   "video": {
     "label": "Crafted with care",
@@ -41,11 +41,16 @@
   "retailers": {
     "label": "Where to Find Us",
     "title": "Available at",
-    "text": "We supply retail, hospitality, wholesalers, and directly to consumers. Find Waterfords at these trusted partners."
+    "text": "We supply retail, hospitality, wholesalers, and directly to consumers."
+  },
+  "cta_strip": {
+    "title": "Taste the future of refined drinks",
+    "text": "Without alcohol, but with full flavour. Find Waterfords Italian Spritz near you."
   },
   "about_page": {
     "label": "Our Story",
     "title": "We are Waterfords Cocktails",
+    "subtitle": "Founded with one clear mission: premium alcohol-free cocktails that never compromise.",
     "text1": "Waterfords Cocktails was founded with one clear mission: to create premium alcohol-free cocktails that do not compromise on taste, elegance, or experience. We believe the future of refined drinking is one where everyone — drivers, parents, athletes, and those who simply choose not to drink — can raise a glass with pride.",
     "text2": "Our Italian Spritz is the result of months of careful formulation. A refined mix of aromatic herbs, fruity citrus, and bittersweet refreshment, bottled in our signature 250ml can. We are based in The Hague and supply retail chains, hospitality venues, wholesalers, and consumers directly across the Netherlands.",
     "text3": "We are proud of what we build, and we are just getting started.",
@@ -56,12 +61,50 @@
     "v2_text": "Open, pour, enjoy. No mixing, no fuss.",
     "v3_title": "For Everyone",
     "v3_text": "Whether you drive, train, or simply prefer to stay sharp — our drinks are for you.",
-    "cta": "Discover Italian Spritz"
+    "cta": "Discover Italian Spritz",
+    "founder_label": "The Team",
+    "founder_name": "Timo",
+    "founder_role": "Founder, Waterfords Cocktails",
+    "founder_p1": "Behind every can of Waterfords is a team with a genuine passion for premium drinks and a belief that going alcohol-free should never mean going flavour-free.",
+    "founder_p2": "We built Waterfords because we saw a gap in the market: ready-to-drink cocktails that look premium, taste premium, and happen to contain zero alcohol. Our Italian Spritz is just the beginning.",
+    "founder_p3": "Based in The Hague, we serve retail, hospitality, wholesale, and direct consumers throughout the Netherlands — and we're growing fast.",
+    "founder_cta": "Get in Touch",
+    "cta_strip_title": "Ready to experience Waterfords?",
+    "cta_strip_text": "Discover our Italian Spritz or find where to buy near you."
+  },
+  "flavours_page": {
+    "find": "Find Where to Buy",
+    "serve_label": "Serve suggestions",
+    "serve_title": "Perfect for every occasion",
+    "serve1_title": "Festive Occasions",
+    "serve1_text": "Raise a glass at weddings, birthdays, or celebrations — without the alcohol.",
+    "serve2_title": "Relaxation",
+    "serve2_text": "Unwind after a long day with the refined flavours of Italy in every sip.",
+    "serve3_title": "Pure Indulgence",
+    "serve3_text": "Pour over ice into a wine glass and garnish with an orange slice for the full experience.",
+    "gallery_label": "Gallery",
+    "gallery_title": "See it in context",
+    "taste_title": "Taste Profile",
+    "taste_text": "How our Italian Spritz feels in the glass.",
+    "taste_citrus": "Citrus",
+    "taste_herbal": "Herbal",
+    "taste_bittersweet": "Bittersweet",
+    "taste_fizz": "Fizz",
+    "ing_herbs": "Aromatic Herbs",
+    "ing_citrus": "Fruity Citrus",
+    "ing_bittersweet": "Bittersweet",
+    "ing_sparkling": "Sparkling",
+    "coming_label": "Coming Soon",
+    "coming_title": "New Spritz Variants",
+    "coming_text": "We are continuously developing new expressions. More exciting alcohol-free Spritz varieties are on their way.",
+    "coming_cta": "Stay Updated",
+    "cta_title": "Ready to try Waterfords?",
+    "cta_text": "Find us at retail, hospitality, and online — or order directly."
   },
   "where_page": {
     "label": "Where to Buy",
     "title": "Find Waterfords near you",
-    "text": "Waterfords Italian Spritz is available across retail, hospitality, and wholesale channels in the Netherlands. We also sell directly to consumers. Looking for a specific retailer or want to stock us? Get in touch.",
+    "text": "Waterfords Italian Spritz is available across retail, hospitality, and wholesale channels in the Netherlands. We also sell directly to consumers.",
     "channels_label": "We supply",
     "ch1": "Retail",
     "ch1_text": "Supermarkets and specialty stores.",
@@ -71,7 +114,12 @@
     "ch3_text": "Distributors and cash & carry.",
     "ch4": "Direct",
     "ch4_text": "Order directly from us.",
-    "cta": "Contact Us"
+    "cta": "Contact Us",
+    "partner_label": "Become a partner",
+    "partner_title": "Interested in stocking Waterfords?",
+    "partner_text": "Whether you run a restaurant, bar, hotel, retail store, or wholesale business — we'd love to hear from you. We offer competitive wholesale pricing and flexible supply options.",
+    "cta_title": "Not sure yet?",
+    "cta_text": "Learn more about our Italian Spritz 0.0% and discover the taste for yourself."
   },
   "contact_page": {
     "label": "Get in Touch",
@@ -86,7 +134,11 @@
     "success": "Thank you! We'll be in touch soon.",
     "address_label": "Address",
     "phone_label": "Phone",
-    "email_label": "Email"
+    "email_label": "Email",
+    "details_label": "Our Details",
+    "find_us": "Find us here",
+    "cta_title": "Want to stock Waterfords?",
+    "cta_text": "We supply retail, hospitality, wholesale and direct consumers across the Netherlands."
   },
   "footer": {
     "tagline": "The future of refined drinks, without alcohol.",
