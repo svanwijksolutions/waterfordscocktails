@@ -572,6 +572,12 @@ body.menu-open .site-header { backdrop-filter: none; -webkit-backdrop-filter: no
 
 .tilt-card { transform-style: preserve-3d; transition: transform 0.15s ease; }
 
+/* Footer credit */
+.footer-bottom-left { display: flex; flex-direction: column; gap: 0.3rem; }
+.footer-credit { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+.footer-credit a { color: var(--clr-spritz); transition: color var(--duration) var(--ease-out); }
+.footer-credit a:hover { color: var(--clr-spritz-light); text-decoration: underline; }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 1200px) {
   .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
