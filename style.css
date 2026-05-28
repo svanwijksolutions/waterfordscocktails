@@ -693,3 +693,48 @@ body.menu-open .site-header { backdrop-filter: none; -webkit-backdrop-filter: no
   .about-img-secondary { width: 48%; height: 48%; }
   .retailer-logo { width: 140px; height: 56px; }
 }
+
+/* ============================================================
+   AANPASSINGEN — header rand, hero titel, page-hero boog,
+   partner grid, mobiele logo's
+   ============================================================ */
+
+/* Header randje onderzijde (standaard wit, gescrolld navy) */
+.site-header {
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.site-header.scrolled {
+  border-bottom: 1px solid rgba(23,49,93,0.12);
+}
+
+/* Hero titel "Waterfords Cocktails" groter */
+.hero-label--lg {
+  font-size: 0.95rem !important;
+  letter-spacing: 0.22em;
+}
+
+/* Page-hero boog lager zodat tekst niet te dicht bij rand eindigt */
+.page-hero { padding: 9rem 0 7rem !important; }
+.page-hero::after { height: 45px !important; }
+
+/* Partner grid op where-to-buy (5 logo's, gelijke afstand) */
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Mobiele logo's groter — retailers strip op homepage */
+@media (max-width: 768px) {
+  .retailer-logo { width: 200px !important; height: 90px !important; }
+  .retailer-logo img { max-height: 64px !important; }
+  .partner-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .retailer-logo { width: 180px !important; height: 80px !important; }
+  .retailer-logo img { max-height: 58px !important; }
+  .partner-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+}
