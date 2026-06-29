@@ -44,7 +44,6 @@ async function loadComponents() {
     initSmoothScroll();
     initTiltCards();
 
-    // Partners dynamisch laden
     loadPartnersHome();
     loadPartnersWhereToBuy();
 
@@ -344,10 +343,7 @@ function initTiltCards() {
   });
 }
 
-/* ── 12. Partners laden vanuit content/partners.json ─────────────────
-   Volgorde = volgorde in de JSON array (zoals ingesteld in het CMS).
-   Geen sortering op volgordegetal — positie in de lijst is leidend.
-   ─────────────────────────────────────────────────────────────────── */
+/* ── 12. Partners laden vanuit content/partners.json ── */
 let _partnersCache = null;
 
 async function fetchPartners() {
@@ -364,31 +360,37 @@ async function fetchPartners() {
   }
 }
 
-/* ── 12a. Homepage: scrollende balk ── */
+/* ── 12a. Homepage: naadloos doorgaande scrollbalk ──────────────────
+   We klonen de items genoeg keer zodat de balk altijd gevuld is,
+   ongeacht hoeveel logo's er zijn. Geen wit vlak meer.
+   ─────────────────────────────────────────────────────────────────── */
 async function loadPartnersHome() {
   const track = document.getElementById('retailers-track-home');
   if (!track) return;
 
   const partners = await fetchPartners();
-  // Geen sortering — volgorde in JSON is leidend
-  const visible = partners.filter(p => p.zichtbaar_homepage !== false);
-
+  const visible  = partners.filter(p => p.zichtbaar_homepage !== false);
   if (!visible.length) return;
 
   track.innerHTML = '';
 
+  // Bouw originele items
   visible.forEach(partner => {
-    const item = buildLogoItem(partner, false);
-    track.appendChild(item);
+    track.appendChild(buildLogoItem(partner, false));
   });
 
-  // Kloon voor naadloze oneindige scroll
-  const items = Array.from(track.children);
-  items.forEach(item => {
-    const clone = item.cloneNode(true);
-    clone.setAttribute('aria-hidden', 'true');
-    track.appendChild(clone);
-  });
+  // Kloon zo vaak dat de totale breedte ruim de schermbreedte overschrijdt.
+  // Minimaal 4 sets zodat ook bij weinig logo's nooit een wit vlak zichtbaar is.
+  const minSets = 4;
+  const totalSets = Math.max(minSets, Math.ceil(20 / visible.length));
+
+  for (let i = 0; i < totalSets; i++) {
+    visible.forEach(partner => {
+      const clone = buildLogoItem(partner, false);
+      clone.setAttribute('aria-hidden', 'true');
+      track.appendChild(clone);
+    });
+  }
 }
 
 /* ── 12b. Waar te koop: grid — max 20 ── */
@@ -397,8 +399,7 @@ async function loadPartnersWhereToBuy() {
   if (!grid) return;
 
   const partners = await fetchPartners();
-  // Geen sortering — volgorde in JSON is leidend, max 20
-  const visible = partners
+  const visible  = partners
     .filter(p => p.zichtbaar_waar_te_koop !== false)
     .slice(0, 20);
 
@@ -407,8 +408,7 @@ async function loadPartnersWhereToBuy() {
   grid.innerHTML = '';
 
   visible.forEach(partner => {
-    const item = buildLogoItem(partner, true);
-    grid.appendChild(item);
+    grid.appendChild(buildLogoItem(partner, true));
   });
 }
 
@@ -431,7 +431,6 @@ function buildLogoItem(partner, isGrid) {
     img.style.maxHeight = '60px';
   }
 
-  // Klikbaar als URL is ingevuld
   if (partner.url && partner.url.trim() !== '') {
     const link = document.createElement('a');
     link.href   = partner.url;
