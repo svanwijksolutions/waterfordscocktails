@@ -1,12 +1,44 @@
 {
   "partners": [
     {
-      "naam": "Jumbo",
-      "logo": "/assets/images/companys/Jumbo_Logo.svg.png",
-      "url": "https://www.jumbo.com/",
+      "naam": "De Wijnkooper",
+      "logo": "/assets/images/companys/De_Wijnkooper_donkergrijs.svg",
+      "url": "https://www.dewijnkooper.nl/",
       "zichtbaar_homepage": true,
       "zichtbaar_waar_te_koop": true,
       "volgorde": 1
+    },
+    {
+      "naam": "Alcoholvrijshop.nl",
+      "logo": "/assets/images/companys/Alcoholvrijshop_logo.svg",
+      "url": "https://www.alcoholvrijshop.nl/",
+      "zichtbaar_homepage": true,
+      "zichtbaar_waar_te_koop": true,
+      "volgorde": 2
+    },
+    {
+      "naam": "Jumbo",
+      "logo": "/assets/images/companys/Jumbo_Logo.svg.svg",
+      "url": "https://www.jumbo.com/",
+      "zichtbaar_homepage": true,
+      "zichtbaar_waar_te_koop": true,
+      "volgorde": 3
+    },
+    {
+      "naam": "Kieveen's",
+      "logo": "/assets/images/companys/Kieveens_Kafee_logo.svg",
+      "url": "https://www.instagram.com/kieveenskafeetje/",
+      "zichtbaar_homepage": true,
+      "zichtbaar_waar_te_koop": true,
+      "volgorde": 4
+    },
+    {
+      "naam": "R-Port",
+      "logo": "/assets/images/companys/R-Port_Logo.svg.svg",
+      "url": "https://rport.nl/",
+      "zichtbaar_homepage": true,
+      "zichtbaar_waar_te_koop": true,
+      "volgorde": 5
     }
   ]
 }
