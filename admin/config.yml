@@ -6,7 +6,7 @@ backend:
   name: github
   repo: svanwijksolutions/waterfordscocktails   # ← aanpassen naar jouw GitHub repo
   branch: main
-  base_url: https://sveltia-cms-auth.sem-f7d.workers.dev
+  base_url: waterfords-cms.sem-f7d.workers.dev
   commit_messages:
     create: 'Partner toegevoegd: {{slug}}'
     update: 'Partners bijgewerkt'
