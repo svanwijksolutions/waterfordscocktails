@@ -39,7 +39,6 @@ async function loadComponents() {
     setActiveNavLink();
     initScrollReveal();
     initVideoSection();
-    initRetailersStrip();
     initCookieBanner();
     initContactForm();
     initSmoothScroll();
@@ -56,7 +55,6 @@ async function loadComponents() {
     initCookieBanner();
     initContactForm();
     initSmoothScroll();
-    // Probeer partners alsnog te laden (ze hebben geen header/footer nodig)
     loadPartnersHome();
     loadPartnersWhereToBuy();
   }
@@ -269,13 +267,7 @@ function initVideoSection() {
   observer.observe(wrapper);
 }
 
-/* ── 8. Retailers infinite strip (wordt nu gevuld door loadPartnersHome) ── */
-function initRetailersStrip() {
-  // Wordt aangeroepen nadat loadPartnersHome() de track heeft gevuld.
-  // Zie onderaan loadPartnersHome() voor de clone-logica.
-}
-
-/* ── 9. Cookie banner ── */
+/* ── 8. Cookie banner ── */
 function initCookieBanner() {
   const banner = document.querySelector('.cookie-banner');
   if (!banner) return;
@@ -293,7 +285,7 @@ function initCookieBanner() {
   });
 }
 
-/* ── 10. Contact form ── */
+/* ── 9. Contact form ── */
 function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
@@ -324,7 +316,7 @@ function initContactForm() {
   });
 }
 
-/* ── 11. Smooth scroll ── */
+/* ── 10. Smooth scroll ── */
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
@@ -337,7 +329,7 @@ function initSmoothScroll() {
   });
 }
 
-/* ── 12. Subtle 3D tilt on cards ── */
+/* ── 11. Subtle 3D tilt on cards ── */
 function initTiltCards() {
   const cards = document.querySelectorAll('.tilt-card');
   if (!cards.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -352,9 +344,9 @@ function initTiltCards() {
   });
 }
 
-/* ── 13. Partners laden vanuit content/partners.json ──────────────────
-   Cache het JSON-bestand zodat het maar één keer wordt opgehaald,
-   ook als beide functies op dezelfde pagina worden aangeroepen.
+/* ── 12. Partners laden vanuit content/partners.json ─────────────────
+   Volgorde = volgorde in de JSON array (zoals ingesteld in het CMS).
+   Geen sortering op volgordegetal — positie in de lijst is leidend.
    ─────────────────────────────────────────────────────────────────── */
 let _partnersCache = null;
 
@@ -364,7 +356,6 @@ async function fetchPartners() {
     const res = await fetch('content/partners.json');
     if (!res.ok) throw new Error('partners.json not found');
     const data = await res.json();
-    // Sorteer op volgorde (laagste eerst), filter niet-zichtbare eruit
     _partnersCache = data.partners || [];
     return _partnersCache;
   } catch (err) {
@@ -373,28 +364,25 @@ async function fetchPartners() {
   }
 }
 
-/* ── 13a. Homepage: scrollende balk — alle actieve homepage-partners ── */
+/* ── 12a. Homepage: scrollende balk ── */
 async function loadPartnersHome() {
   const track = document.getElementById('retailers-track-home');
-  if (!track) return; // Niet op deze pagina
+  if (!track) return;
 
   const partners = await fetchPartners();
-  const visible  = partners
-    .filter(p => p.zichtbaar_homepage !== false) // standaard true als niet ingesteld
-    .sort((a, b) => (a.volgorde || 999) - (b.volgorde || 999));
+  // Geen sortering — volgorde in JSON is leidend
+  const visible = partners.filter(p => p.zichtbaar_homepage !== false);
 
   if (!visible.length) return;
 
-  // Verwijder eventuele noscript-fallback content
   track.innerHTML = '';
 
-  // Bouw de logo-items
   visible.forEach(partner => {
     const item = buildLogoItem(partner, false);
     track.appendChild(item);
   });
 
-  // Kloon voor naadloze oneindige scroll (zelfde logica als origineel)
+  // Kloon voor naadloze oneindige scroll
   const items = Array.from(track.children);
   items.forEach(item => {
     const clone = item.cloneNode(true);
@@ -403,20 +391,19 @@ async function loadPartnersHome() {
   });
 }
 
-/* ── 13b. Waar te koop: grid — max 20 actieve partners ── */
+/* ── 12b. Waar te koop: grid — max 20 ── */
 async function loadPartnersWhereToBuy() {
   const grid = document.getElementById('partner-grid-where');
-  if (!grid) return; // Niet op deze pagina
+  if (!grid) return;
 
   const partners = await fetchPartners();
-  const visible  = partners
+  // Geen sortering — volgorde in JSON is leidend, max 20
+  const visible = partners
     .filter(p => p.zichtbaar_waar_te_koop !== false)
-    .sort((a, b) => (a.volgorde || 999) - (b.volgorde || 999))
-    .slice(0, 20); // Maximaal 20
+    .slice(0, 20);
 
   if (!visible.length) return;
 
-  // Verwijder eventuele noscript-fallback content
   grid.innerHTML = '';
 
   visible.forEach(partner => {
@@ -429,14 +416,10 @@ async function loadPartnersWhereToBuy() {
 function buildLogoItem(partner, isGrid) {
   const wrapper = document.createElement('div');
   wrapper.setAttribute('role', 'listitem');
+  wrapper.className = 'retailer-logo';
 
   if (isGrid) {
-    // Grid-stijl voor "Waar te koop"
-    wrapper.className = 'retailer-logo';
     wrapper.style.cssText = 'opacity:1; filter:none; width:auto; height:80px;';
-  } else {
-    // Strip-stijl voor homepage
-    wrapper.className = 'retailer-logo';
   }
 
   const img = document.createElement('img');
