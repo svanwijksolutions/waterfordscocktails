@@ -1,0 +1,41 @@
+name: Bouwen en publiceren
+
+# Draait automatisch bij elke push op main (ook wanneer Timo via /admin
+# een partner toevoegt, verwijdert of de volgorde wijzigt) en kan
+# handmatig worden gestart via de Actions-tab op GitHub.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Repository ophalen
+        uses: actions/checkout@v4
+
+      - name: Pages configureren
+        uses: actions/configure-pages@v5
+
+      - name: Site als artifact uploaden
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Publiceren naar GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

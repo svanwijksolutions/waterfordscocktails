@@ -106,7 +106,7 @@
       </div>
     </section>
 
-    <!-- FLAVOURS — single card + subtle coming-soon note -->
+    <!-- FLAVOURS -->
     <section class="section section-light" aria-labelledby="flavours-heading">
       <div class="container">
         <div style="text-align:center; max-width:600px; margin:0 auto 3rem;" class="reveal">
@@ -164,7 +164,7 @@
       </div>
     </section>
 
-    <!-- RETAILERS -->
+    <!-- RETAILERS — dynamisch geladen vanuit content/partners.json -->
     <section class="retailers-section section-sm" aria-labelledby="retailers-heading">
       <div class="container">
         <div style="text-align:center; margin-bottom:2rem;" class="reveal">
@@ -175,12 +175,14 @@
       </div>
 
       <div class="retailers-strip" aria-label="Partner logos">
-        <div class="retailers-track" role="list">
-          <div class="retailer-logo" role="listitem"><img src="assets/images/companys/De_Wijnkooper_donkergrijs.svg" alt="De Wijnkooper" loading="lazy" /></div>
-          <div class="retailer-logo" role="listitem"><img src="assets/images/companys/Alcoholvrijshop_logo.svg" alt="Alcoholvrij Shop" loading="lazy" /></div>
-          <div class="retailer-logo" role="listitem"><img src="assets/images/companys/Jumbo_Logo.svg" alt="Jumbo" loading="lazy" /></div>
-          <div class="retailer-logo" role="listitem"><img src="assets/images/companys/R-Port_Logo.svg" alt="R-Port" loading="lazy" /></div>
-          <div class="retailer-logo" role="listitem"><img src="assets/images/companys/Kieveens_Kafee_logo.svg" alt="Kieveen's Kafee" loading="lazy" /></div>
+        <div class="retailers-track" id="retailers-track-home" role="list">
+          <!-- Wordt dynamisch gevuld door loadPartnersHome() in script.js -->
+          <!-- Fallback voor het geval JSON nog niet geladen is -->
+          <noscript>
+            <div class="retailer-logo" role="listitem"><img src="assets/images/companys/De_Wijnkooper_donkergrijs.svg" alt="De Wijnkooper" loading="lazy" /></div>
+            <div class="retailer-logo" role="listitem"><img src="assets/images/companys/Alcoholvrijshop_logo.svg" alt="Alcoholvrij Shop" loading="lazy" /></div>
+            <div class="retailer-logo" role="listitem"><img src="assets/images/companys/Jumbo_Logo.svg" alt="Jumbo" loading="lazy" /></div>
+          </noscript>
         </div>
       </div>
     </section>

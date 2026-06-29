@@ -1,0 +1,88 @@
+# ==========================================================================
+# Sveltia CMS — configuratie voor Waterfords Cocktails
+# ==========================================================================
+
+backend:
+  name: github
+  repo: svanwijksolutions/waterfordscocktails   # ← aanpassen naar jouw GitHub repo
+  branch: main
+  base_url: https://sveltia-cms-auth.sem-f7d.workers.dev
+  commit_messages:
+    create: 'Partner toegevoegd: {{slug}}'
+    update: 'Partners bijgewerkt'
+    delete: 'Partner verwijderd: {{slug}}'
+
+# Eigen logo op het inlogscherm
+logo_url: /assets/images/favicon.ico
+
+# Adres van de live site
+site_url: https://waterfordscocktails.com/
+display_url: https://waterfordscocktails.com/
+
+# Waar geüploade partnerlogo's terechtkomen
+media_folder: "assets/images/companys"
+public_folder: "/assets/images/companys"
+
+locale: nl
+
+collections:
+  - name: partners
+    label: Partners & Retailers
+    label_singular: Partner
+    description: >
+      Beheer hier alle partnerlogo's. De volgorde bepaalt hoe ze op de website staan.
+      Op de homepage worden ALLE actieve partners getoond (in de scrollende balk).
+      Op 'Waar te koop' worden maximaal 20 partners getoond — kies de belangrijkste.
+      Na opslaan wordt de website automatisch bijgewerkt.
+    files:
+      - name: partners_lijst
+        label: Partnerlijst
+        file: content/partners.json
+        fields:
+          - label: "Partners"
+            name: partners
+            widget: list
+            label_singular: "Partner"
+            summary: "{{volgorde}}. {{naam}}"
+            minimize_collapsed: false
+            hint: >
+              Sleep een partner omhoog of omlaag om de volgorde te wijzigen.
+              De volgorde hier bepaalt de volgorde op de website.
+            fields:
+              - label: "Naam"
+                name: naam
+                widget: string
+                hint: "Volledige bedrijfsnaam, bijv. 'Jumbo' of 'De Wijnkooper'"
+
+              - label: "Logo"
+                name: logo
+                widget: image
+                hint: "Upload een SVG of transparante PNG. Aanbevolen: SVG voor scherpe weergave op alle schermformaten."
+                media_folder: "/assets/images/companys"
+                public_folder: "/assets/images/companys"
+
+              - label: "Website URL (optioneel)"
+                name: url
+                widget: string
+                required: false
+                hint: "Bijv. https://www.jumbo.com — logo wordt dan klikbaar. Leeg laten als niet van toepassing."
+
+              - label: "Zichtbaar op homepage"
+                name: zichtbaar_homepage
+                widget: boolean
+                default: true
+                hint: "Vink aan om deze partner in de scrollende balk op de homepage te tonen."
+
+              - label: "Zichtbaar op 'Waar te koop'"
+                name: zichtbaar_waar_te_koop
+                widget: boolean
+                default: true
+                hint: "Vink aan om deze partner op de 'Waar te koop' pagina te tonen. Maximum 20 partners."
+
+              - label: "Volgorde"
+                name: volgorde
+                widget: number
+                value_type: int
+                min: 1
+                max: 999
+                hint: "Lager = eerder. Gebruik 1, 2, 3... of sleep de rijen om te herordenen."

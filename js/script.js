@@ -45,6 +45,10 @@ async function loadComponents() {
     initSmoothScroll();
     initTiltCards();
 
+    // Partners dynamisch laden
+    loadPartnersHome();
+    loadPartnersWhereToBuy();
+
   } catch (err) {
     console.warn('Component load failed:', err);
     initScrollReveal();
@@ -52,6 +56,9 @@ async function loadComponents() {
     initCookieBanner();
     initContactForm();
     initSmoothScroll();
+    // Probeer partners alsnog te laden (ze hebben geen header/footer nodig)
+    loadPartnersHome();
+    loadPartnersWhereToBuy();
   }
 }
 
@@ -147,7 +154,6 @@ function updateLangSwitcherUI(lang) {
   const currentLabel = document.getElementById('currentLangLabel');
   if (currentLabel) currentLabel.textContent = labels[lang] || 'EN';
 
-  // Swap visible flag in trigger button
   const currentFlag = document.getElementById('currentFlag');
   if (currentFlag) {
     const activeOption = document.querySelector('.lang-option[data-lang="' + lang + '"] .flag-icon');
@@ -243,10 +249,8 @@ function initVideoSection() {
   const playBtn = document.querySelector('.video-play-btn');
   if (!wrapper || !videoEl) return;
 
-  // Hide play button — video plays automatically
   if (playBtn) playBtn.style.display = 'none';
 
-  // Make sure video is muted (required for autoplay) and inline
   videoEl.muted = true;
   videoEl.playsInline = true;
   videoEl.setAttribute('playsinline', '');
@@ -265,16 +269,10 @@ function initVideoSection() {
   observer.observe(wrapper);
 }
 
-/* ── 8. Retailers infinite strip ── */
+/* ── 8. Retailers infinite strip (wordt nu gevuld door loadPartnersHome) ── */
 function initRetailersStrip() {
-  const track = document.querySelector('.retailers-track');
-  if (!track) return;
-  const items = Array.from(track.children);
-  items.forEach(item => {
-    const clone = item.cloneNode(true);
-    clone.setAttribute('aria-hidden', 'true');
-    track.appendChild(clone);
-  });
+  // Wordt aangeroepen nadat loadPartnersHome() de track heeft gevuld.
+  // Zie onderaan loadPartnersHome() voor de clone-logica.
 }
 
 /* ── 9. Cookie banner ── */
@@ -352,4 +350,116 @@ function initTiltCards() {
     });
     card.addEventListener('mouseleave', () => { card.style.transform = ''; });
   });
+}
+
+/* ── 13. Partners laden vanuit content/partners.json ──────────────────
+   Cache het JSON-bestand zodat het maar één keer wordt opgehaald,
+   ook als beide functies op dezelfde pagina worden aangeroepen.
+   ─────────────────────────────────────────────────────────────────── */
+let _partnersCache = null;
+
+async function fetchPartners() {
+  if (_partnersCache) return _partnersCache;
+  try {
+    const res = await fetch('content/partners.json');
+    if (!res.ok) throw new Error('partners.json not found');
+    const data = await res.json();
+    // Sorteer op volgorde (laagste eerst), filter niet-zichtbare eruit
+    _partnersCache = data.partners || [];
+    return _partnersCache;
+  } catch (err) {
+    console.warn('Partners JSON laden mislukt:', err);
+    return [];
+  }
+}
+
+/* ── 13a. Homepage: scrollende balk — alle actieve homepage-partners ── */
+async function loadPartnersHome() {
+  const track = document.getElementById('retailers-track-home');
+  if (!track) return; // Niet op deze pagina
+
+  const partners = await fetchPartners();
+  const visible  = partners
+    .filter(p => p.zichtbaar_homepage !== false) // standaard true als niet ingesteld
+    .sort((a, b) => (a.volgorde || 999) - (b.volgorde || 999));
+
+  if (!visible.length) return;
+
+  // Verwijder eventuele noscript-fallback content
+  track.innerHTML = '';
+
+  // Bouw de logo-items
+  visible.forEach(partner => {
+    const item = buildLogoItem(partner, false);
+    track.appendChild(item);
+  });
+
+  // Kloon voor naadloze oneindige scroll (zelfde logica als origineel)
+  const items = Array.from(track.children);
+  items.forEach(item => {
+    const clone = item.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    track.appendChild(clone);
+  });
+}
+
+/* ── 13b. Waar te koop: grid — max 20 actieve partners ── */
+async function loadPartnersWhereToBuy() {
+  const grid = document.getElementById('partner-grid-where');
+  if (!grid) return; // Niet op deze pagina
+
+  const partners = await fetchPartners();
+  const visible  = partners
+    .filter(p => p.zichtbaar_waar_te_koop !== false)
+    .sort((a, b) => (a.volgorde || 999) - (b.volgorde || 999))
+    .slice(0, 20); // Maximaal 20
+
+  if (!visible.length) return;
+
+  // Verwijder eventuele noscript-fallback content
+  grid.innerHTML = '';
+
+  visible.forEach(partner => {
+    const item = buildLogoItem(partner, true);
+    grid.appendChild(item);
+  });
+}
+
+/* ── Helper: bouw een logo-item aan ── */
+function buildLogoItem(partner, isGrid) {
+  const wrapper = document.createElement('div');
+  wrapper.setAttribute('role', 'listitem');
+
+  if (isGrid) {
+    // Grid-stijl voor "Waar te koop"
+    wrapper.className = 'retailer-logo';
+    wrapper.style.cssText = 'opacity:1; filter:none; width:auto; height:80px;';
+  } else {
+    // Strip-stijl voor homepage
+    wrapper.className = 'retailer-logo';
+  }
+
+  const img = document.createElement('img');
+  img.src     = partner.logo || '';
+  img.alt     = partner.naam || '';
+  img.loading = 'lazy';
+
+  if (isGrid) {
+    img.style.maxHeight = '60px';
+  }
+
+  // Klikbaar als URL is ingevuld
+  if (partner.url && partner.url.trim() !== '') {
+    const link = document.createElement('a');
+    link.href   = partner.url;
+    link.target = '_blank';
+    link.rel    = 'noopener noreferrer';
+    link.setAttribute('aria-label', partner.naam);
+    link.appendChild(img);
+    wrapper.appendChild(link);
+  } else {
+    wrapper.appendChild(img);
+  }
+
+  return wrapper;
 }

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Waterfords Cocktails — Beheer</title>
+  <link rel="icon" href="../assets/images/favicon.ico">
+  <style>
+    #loading {
+      position: fixed; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 1rem;
+      font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+      background: #0a1628; color: #f0ede8; text-align: center; padding: 1.5rem;
+    }
+    #loading strong {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.6rem; color: #c9a96e; letter-spacing: .04em;
+    }
+    #loading span {
+      font-size: .8rem; letter-spacing: .24em;
+      text-transform: uppercase; color: rgba(240,237,232,.6);
+    }
+    #loading small {
+      font-size: .85rem; color: rgba(240,237,232,.4); margin-top: .5rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="loading">
+    <strong>Waterfords Cocktails</strong>
+    <span>Partnerbeheer</span>
+    <small>Bezig met laden…</small>
+  </div>
+
+  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        var el = document.getElementById('loading');
+        if (el) el.style.display = 'none';
+      }, 1200);
+    });
+  </script>
+</body>
+</html>
