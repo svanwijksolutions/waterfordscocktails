@@ -39,6 +39,13 @@
       "zichtbaar_homepage": true,
       "zichtbaar_waar_te_koop": true,
       "volgorde": 5
+    },
+    {
+      "naam": "Brasserie Mirell",
+      "logo": "/assets/images/companys/IMG_1413.jpeg",
+      "url": "https://brasseriemirell.nl/",
+      "zichtbaar_homepage": true,
+      "zichtbaar_waar_te_koop": true
     }
   ]
 }
