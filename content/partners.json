@@ -1,0 +1,12 @@
+{
+  "partners": [
+    {
+      "naam": "Jumbo",
+      "logo": "/assets/images/companys/Jumbo_Logo.svg.png",
+      "url": "https://www.jumbo.com/",
+      "zichtbaar_homepage": true,
+      "zichtbaar_waar_te_koop": true,
+      "volgorde": 1
+    }
+  ]
+}
