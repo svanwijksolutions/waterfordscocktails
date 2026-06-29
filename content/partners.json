@@ -1,6 +1,14 @@
 {
   "partners": [
     {
+      "naam": "Jumbo",
+      "logo": "/assets/images/companys/Jumbo_Logo.svg.svg",
+      "url": "https://www.jumbo.com/",
+      "zichtbaar_homepage": true,
+      "zichtbaar_waar_te_koop": true,
+      "volgorde": 3
+    },
+    {
       "naam": "De Wijnkooper",
       "logo": "/assets/images/companys/De_Wijnkooper_donkergrijs.svg",
       "url": "https://www.dewijnkooper.nl/",
@@ -15,14 +23,6 @@
       "zichtbaar_homepage": true,
       "zichtbaar_waar_te_koop": true,
       "volgorde": 2
-    },
-    {
-      "naam": "Jumbo",
-      "logo": "/assets/images/companys/Jumbo_Logo.svg.svg",
-      "url": "https://www.jumbo.com/",
-      "zichtbaar_homepage": true,
-      "zichtbaar_waar_te_koop": true,
-      "volgorde": 3
     },
     {
       "naam": "Kieveen's",
