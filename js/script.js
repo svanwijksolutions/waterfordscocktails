@@ -277,10 +277,12 @@ function initCookieBanner() {
   banner.querySelector('.cookie-accept')?.addEventListener('click', () => {
     localStorage.setItem('wf-cookies', 'accepted');
     banner.classList.add('hidden');
+    window.gtag?.('consent', 'update', { analytics_storage: 'granted' });
   });
   banner.querySelector('.cookie-decline')?.addEventListener('click', () => {
     localStorage.setItem('wf-cookies', 'declined');
     banner.classList.add('hidden');
+    window.gtag?.('consent', 'update', { analytics_storage: 'denied' });
   });
 }
 
